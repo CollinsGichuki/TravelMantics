@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DealActivity">
+
+    <EditText
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_standard"
+        android:layout_marginTop="@dimen/layout_margin_top"
+        android:layout_marginEnd="@dimen/layout_margin_standard"
+        android:hint="@string/title_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/price_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin_standard"
+        android:layout_marginEnd="@dimen/layout_margin_standard"
+        android:layout_marginStart="@dimen/layout_margin_standard"
+        android:hint="@string/Price_hint"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin_standard"
+        android:layout_marginEnd="@dimen/layout_margin_standard"
+        android:layout_marginStart="@dimen/layout_margin_standard"
+        android:hint="@string/description_hint"
+        app:layout_constraintTop_toBottomOf="@id/price_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin_standard"
+        android:layout_marginEnd="@dimen/layout_margin_standard"
+        android:layout_marginStart="@dimen/layout_margin_standard"
+        android:text="Upload Image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_text" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin_standard"
+        android:layout_marginEnd="@dimen/layout_margin_standard"
+        android:layout_marginStart="@dimen/layout_margin_standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_image"
+        app:srcCompat="@android:color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
